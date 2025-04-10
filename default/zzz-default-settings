@@ -22,8 +22,8 @@ sed -i 's/root::0:0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999
 sed -i 's/root:::0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/g' /etc/shadow
 
 # extra packages
-echo 'src/gz openwrt_extras https://clone.kejizero.online/raw.githubusercontent.com/oppen321/openwrt_extras/main/mips_mips32/package' >> /etc/opkg/distfeeds.conf
-echo 'src/gz openwrt_helloworld https://clone.kejizero.online/raw.githubusercontent.com/oppen321/openwrt_extras/main/mips_mips32/helloworld' >> /etc/opkg/distfeeds.conf
+echo 'src/gz openwrt_extras https://clone.kejizero.online/raw.githubusercontent.com/oppen321/openwrt_extras/main/mipsel_24kc/package' >> /etc/opkg/distfeeds.conf
+echo 'src/gz openwrt_helloworld https://clone.kejizero.online/raw.githubusercontent.com/oppen321/openwrt_extras/main/mipsel_24kc/helloworld' >> /etc/opkg/distfeeds.conf
 
 # check_signature
 sed -i 's/^option check_signature/# option check_signature/' /etc/opkg.conf
