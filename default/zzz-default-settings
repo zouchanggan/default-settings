@@ -178,8 +178,9 @@ crontab /etc/crontabs/root
 # ==========================================================
 # 协议：静态
 uci -q set network.lan.proto='static'
-# 本机管理 IP
-uci -q set network.lan.ipaddr='192.168.1.10'
+# 本机管理 IP，与编译时 ip 保持一致
+LAN_ADDR="${LAN_ADDR:-__LAN_ADDR__}"
+uci -q set network.lan.ipaddr="${LAN_ADDR}"
 # 子网掩码
 uci -q set network.lan.netmask='255.255.255.0'
 # 默认网关指向主路由
